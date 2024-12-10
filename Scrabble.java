@@ -67,7 +67,7 @@ public class Scrabble {
 			sum+=SCRABBLE_LETTER_VALUES[indx];
 		}
 		sum = sum * word.length();
-		if (MyString.subsetOf(word.toLowerCase(), "runi")) {
+		if (MyString.subsetOf("runi", word.toLowerCase() )) {
 			sum += 1000;
 		}
 		if (word.length()==HAND_SIZE) {
