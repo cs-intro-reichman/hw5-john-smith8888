@@ -67,8 +67,11 @@ public class Scrabble {
 			sum+=SCRABBLE_LETTER_VALUES[indx];
 		}
 		sum = sum * word.length();
-		if (MyString.contains(word.toLowerCase(), "runi")) {
+		if (MyString.subsetOf(word.toLowerCase(), "runi")) {
 			sum += 1000;
+		}
+		if (word.length()==HAND_SIZE) {
+			sum+=50;
 		}
 		return sum;
 	}
@@ -112,9 +115,6 @@ public class Scrabble {
 			}
 			else{
 				score+=wordScore(input);
-				if (input.length()==10) {
-					score+=50;
-				}
 				hand = MyString.remove(hand, input);
 				System.out.println(input + " earned " +wordScore(input)+ " points. Total: " +score+ " points");
 			}
