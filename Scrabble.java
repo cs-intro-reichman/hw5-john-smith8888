@@ -108,7 +108,7 @@ public class Scrabble {
 				break;
 			}
 			if (!MyString.subsetOf(input, hand)) {
-				System.out.println("Invalid word. Try againץ");
+				System.out.println("Invalid word. Try again.");
 				continue;
 			}
 			if (!isWordInDictionary(input)) {
@@ -120,7 +120,7 @@ public class Scrabble {
 				hand = MyString.remove(hand, input);
 				System.out.println(input + " earned " +wordScore(input)+ " points. Score: " +score+ " points\n");
 			}
-			System.out.println();
+			// System.out.println();
 		}
 		if (hand.length() == 0) {
 	        System.out.println("Ran out of letters. Total score: " + score + " points");
