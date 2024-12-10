@@ -109,9 +109,11 @@ public class Scrabble {
 			}
 			if (!MyString.subsetOf(input, hand)) {
 				System.out.println("Invalid choice. Try again");
+				continue;
 			}
 			if (!isWordInDictionary(input)) {
 				System.out.println("No such word in the dictionary. Try again");
+				continue;
 			}
 			else{
 				score+=wordScore(input);
